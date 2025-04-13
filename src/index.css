@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100;
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Add JetBrains Mono font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Add dark theme overrides */
+.dark-theme-override * {
+  --tw-bg-opacity: 1 !important;
+}
+
+/* Force dark backgrounds on all common elements */
+.dark-theme-override div,
+.dark-theme-override section,
+.dark-theme-override article,
+.dark-theme-override aside,
+.dark-theme-override main,
+.dark-theme-override header,
+.dark-theme-override footer,
+.dark-theme-override nav,
+.dark-theme-override button,
+.dark-theme-override span {
+  background-color: transparent !important;
+}
+
+.dark-theme-override .bg-white,
+.dark-theme-override [class*="bg-white"],
+.dark-theme-override [class*="bg-gray-50"],
+.dark-theme-override [class*="bg-gray-100"],
+.dark-theme-override [class*="bg-gray-200"],
+.dark-theme-override [class*="bg-gray-300"],
+.dark-theme-override [style*="background-color: white"],
+.dark-theme-override [style*="background-color: rgb(255, 255, 255)"],
+.dark-theme-override [style*="background: white"],
+.dark-theme-override [style*="background: rgb(255, 255, 255)"] {
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity)) !important; /* bg-gray-800 */
+  color: rgb(209 213 219 / 1) !important; /* text-gray-300 */
+}
+
+/* Force specific cards to have dark backgrounds */
+.dark-theme-override .card,
+.dark-theme-override [class*="card"],
+.dark-theme-override [class*="Card"],
+.dark-theme-override [class*="module-card"],
+.dark-theme-override [class*="lab-card"] {
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity)) !important; /* bg-gray-800 */
+  border-color: rgb(55 65 81 / 1) !important; /* border-gray-700 */
+}
+
+.dark-theme-override .text-gray-600,
+.dark-theme-override .text-gray-700,
+.dark-theme-override .text-gray-800,
+.dark-theme-override .text-gray-900,
+.dark-theme-override [class*="text-black"] {
+  color: rgb(209 213 219 / 1) !important; /* text-gray-300 */
+}
+
+.dark-theme-override .border,
+.dark-theme-override [class*="border-gray-100"],
+.dark-theme-override [class*="border-gray-200"],
+.dark-theme-override [class*="border-gray-300"],
+.dark-theme-override [class*="border-white"] {
+  border-color: rgb(55 65 81 / 1) !important; /* border-gray-700 */
+}
